@@ -1,0 +1,233 @@
+/*----------------------------TAGS PADRÕES HTML------------------------------------*/
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", sans-serif;
+}
+
+h1 {
+	font-family: 'Roboto';
+
+}
+/*--------------------------BACKGROUND IMAGEM-----------------------------------------*/
+.bg {
+	background-image: url("../img/fundo2.jpg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+/*-----------------------ESTILIZAÇÃO DO MENU-------------------------------------------*/
+.menu {
+	height: 100px;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.4);
+
+}
+
+.menu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #089DE3;
+	display: block;
+	transition: 0.3s;
+}
+
+.menu ul {
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	float: right;
+}
+
+.menu ul li {
+	font-family: 'Roboto';
+
+}
+
+.menu a:hover {
+	color: #ffffff;
+}
+/*--------------------------BOTÃO DE LOGIN------------------------------------*/		
+.btn-login-mc {
+
+	padding: 0px 25px 0px 25px;
+	font-family: 'Roboto';
+}
+
+.logo {
+	float: left;
+}
+
+/*--------------------------MODAL----------------------------------------------*/
+.modal-cm {
+	margin-top: 150px;
+}
+
+.registro-cm a{
+	font-size: 1em;
+	margin: auto 0;
+}
+
+.registro-cm a:hover{
+	color: #333298;
+}
+
+.botao-registro-cm {
+	text-align: center;
+}
+/*---------------------------CONTEÚDO PRINCIPAL HOME--------------------------------*/	
+
+.remove{ 
+	margin-top: 0px !important;
+}
+
+
+.linha::after{
+	content: '';
+	width: 75px;
+	height: 5px;
+	background-color: white;
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+.pisca::after{
+	content: '|';
+	margin-left: 5px;
+	opacity:1 ;
+	animation: pisca .7s infinite;
+}
+
+@keyframes pisca{
+	0%,100%{
+		opacity:1 ;
+
+	}
+	50%{
+		opacity:0 ;
+
+	}
+
+}
+
+
+
+
+.conteudo {
+	margin-top: 200px !important;
+}
+.frase {
+	color: #FFFFFF;
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: 3em;
+}
+
+.botao-main {
+	font-family: 'Lato', sans-serif;
+}
+
+.select-mc{
+	width: 100% !important;
+	height: 500px !important;
+	padding-top: 100px;
+	background-color: #F9F7FF;
+	border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.select-mc p {
+	color: #107dac;
+	font-family: 'Playfair Display', serif;
+	font-size: 3em;
+	padding-top: 30px;
+}
+
+.select-box-cm {
+	padding-top: 40px;
+}
+
+.secao-icones {
+	width: 100%;
+	height: 550px;
+	padding-top: 150px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	background-color: #107DAC;
+}
+
+
+.secao-icones p {
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+
+}
+
+.icon-text {
+	margin-top: 30px;
+}
+
+
+
+
+/*------------------------BACKGROUND FORMULÁRIOS DE CADASTRO---------------------*/	
+.bg-cadastro-cm {
+	background-color: rgba(248, 245, 255, 0.6);
+}
+
+
+
+/*---------------------------RODAPÉ---------------------------------------------*/
+footer{
+	width: 100% !important;
+	height: 220px !important;
+}
+
+.rodape-cm p{
+	padding-top: 190px;
+}
+
+
+.color-blue {
+	color: #107DAC;
+	font-weight: bolder;
+
+}
+
+.texto-rodape p {
+	font-family: font-family: 'Signika', sans-serif !important;
+}
+
+.texto-menu-rodape ul li{
+	font-size: 22px;
+	font-weight: 700;
+	color: #525252;
+}
+
+
+
+footer div.row.row-1 div.col.col-3 div.box-group div.button-group a.btn{
+	width: 90%;
+	font-size: 18px;
+}
+
+footer div.row.row-1 div.col.col-3 div.box-group div.button-group p.lead strong {
+	color: #525252;
+	font-weight: bolder;
+}
+
+footer .row.row-1 {
+	padding-top: 100px;
+}
+
+/*------------------------PAINEL ADMINISTRATIVO--------------------------------- */
+
+.texto-admin p {
+	font-family: 'Lato' sans-serif;
+}
+
