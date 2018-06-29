@@ -58,7 +58,7 @@
 
 
 	<?php 
-		  require_once('_funcoes//funcoes_login_paciente.php');
+		  require_once('_funcoes/funcoes_login_paciente.php');
 		  require_once('mostra-alerta.php');
 
  			// VALIDAÇAO DE LOGADO OU NAO

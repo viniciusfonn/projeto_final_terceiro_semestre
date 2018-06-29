@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<meta charset="utf-8">
 	<?php 
-		require_once('_funcoes//funcoes_especialidades.php');
+		require_once('_funcoes/funcoes_especialidades.php');
 		require_once('conecta.php');
 		// array com todas as especialidades.
 		$especialidades=listaEspecialidades($conexao);
@@ -27,8 +27,6 @@
 
 
 	?>
-
-	
 	          <script type="text/javascript">
                   function mudarAction(){
                 document.formulario.action = "logica_login_medico.php";

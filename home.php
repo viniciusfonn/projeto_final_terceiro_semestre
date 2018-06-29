@@ -16,6 +16,7 @@
 				<div class="botao-main">
 					<center><a href="cadastro_paciente.php"><button class="btn btn-primary">Cadastre-se Agora</button></a></center>
 				</div>	
+				<a href="consulta_usuario.php">minhas consultas</a>
 			</div>
 		</main>
 

@@ -17,6 +17,15 @@ function buscaConsultas($conexao,$id_medico){
 }
 
 
+function busca_medico($conexao,$id_medico){
+	$sql="SELECT * FROM medicos WHERE id_medico ='$id_medico';";
+	$resultado=mysqli_query($conexao,$sql);
+	$medico=mysqli_fetch_assoc($resultado);
+
+	return $medico;
+}
+
+
 
 
 
