@@ -17,7 +17,7 @@ $id_medico=$_POST['id_medico'];
 if(tornar_indisponivel($conexao,$horario,$data,$id_medico)){
 	echo "<center><h1>Horario  marcado como indisponivel</h1></center>";
 		
-		header( "Refresh:2; url=horarios_indisponiveis_medico.php");
+		header( "Refresh:2; url=agendamento-medico.php");
 }
 
 

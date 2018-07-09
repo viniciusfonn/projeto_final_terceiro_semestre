@@ -18,19 +18,14 @@
 
 		// teste para o agendamento
 		date_default_timezone_set('America/Sao_Paulo');
-		$data = date('Y-m-d');
+		// $data = date('Y-m-d');
 		// fim teste
 
-
-
-
-
-
 	?>
-	          <script type="text/javascript">
+</head>
+<script type="text/javascript">
                   function mudarAction(){
                 document.formulario.action = "logica_login_medico.php";
                 document.formulario.submit();
               }
-			</script>
-</head>
+</script>

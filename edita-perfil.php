@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-<?php include("header.php"); ?>
+<?php include("header.php"); 
+require_once('_funcoes/funcoes_login_paciente.php');
+require_once('_funcoes/funcoes_paciente.php'); ?>
 
 
 
@@ -17,14 +19,14 @@
 		<a href="home.php"> <p class="btn btn-primary">Início</p></a>
 	</div>
 	
-	<h1>Formulário de cadastro:</h1><br>
+	<h1>Editar cadastro:</h1><br>
 				<form action="logica_cadastra_paciente.php" method="POST" >
 					<div>
 					<h4>Dados pessoais:</h4><br>
 					<div class="row">
 						<div class="col">
 							<label for="name">Nome:</label>
-							<input class="form-control" type="text" placeholder="Nome" name="nome">
+							<input class="form-control" type="text" placeholder="Nome" name="nome" value="<?=$id_usuario_return['nome'] ?>">
 						</div>
 					
 						<div class="col">

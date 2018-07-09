@@ -5,8 +5,8 @@
 
 
 		<?php 
+		require_once('_funcoes/funcoes_login_medico.php');
 		
-		require_once('_funcoes/funcoes_login_paciente.php');
 		require_once('mostra-alerta.php');
 		
 
@@ -16,17 +16,15 @@
 			
 			
 			<div class="btn-group dropleft">
-				<a href="home.php">Home</a>
-				<a href="contato.php">Contate-nos</a>
-				<a href="sobre.php">Sobre</a>
+				
 				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Perfil
 				</button>
 				<div class="dropdown-menu">
 					<ul class="lista-drop">
-						<li><a href="consultas.php">Consultas</a></li>
-						<li><a href="edita-perfil.php">Editar</a></li>
-						<li><a href="historico.php">Histórico</a></li>
+						<li><a href="painel_medico.php">Consultas</a></li>
+						<li><a href="agendamento-medico.php">Agendamento</a></li>
+						<li><a href="historico-medico.php">Histórico</a></li>
 						<li><a href="logout.php">Deslogar</a></li>
 					</ul>
 				</div>
@@ -86,3 +84,6 @@
 	</ul>
 </nav>
 
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>

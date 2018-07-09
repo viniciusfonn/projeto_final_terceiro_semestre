@@ -1,26 +1,26 @@
 <?php 
 
 require_once('header.php');
-require_once('_funcoes/funcoes_login_medico.php');
-require_once('_funcoes/funcoes_medico.php');
+require_once('_funcoes/funcoes_login_paciente.php');
+require_once('_funcoes/funcoes_paciente.php');
 require_once('conecta.php');
+require_once('_funcoes/funcoes_consulta.php');
 
-$_SESSION['medico_logado'];
-$id_medico=$_SESSION["medico_logado_id"];
-$consultas=buscaConsultas($conexao,$id_medico);
+$id_usuario=$_SESSION['usuario_logado'];
+$consultas=consultas_marcadas_historico($conexao,$id_usuario);
+
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php require_once("header.php"); ?>
+
 
 <body>
-	<?php require_once("nav-medico.php"); ?>
+	<?php require_once("nav.php"); ?>
 	<center><h2 style="margin-top: 30px;">Painel do médico - Minha consulta</h2></center><br><br>
-	<center><h2><a href="#">Consultas agendadas:</h2></a></center><br><br>
-	<div class="container" style="display:flex;justify-content:center;align-items:center; height: auto; padding-bottom: 200px; min-height: 415px;">
+	<center><h2><a href="#">Histórico de consultas:</h2></a></center><br><br>
+	<div class="container" style="display:flex;justify-content:center;align-items:center; height: auto; padding-bottom: 200px; min-height: 420px;">
 		
 
 		<table class="table" border="2" style="width: 500px">
@@ -29,26 +29,21 @@ $consultas=buscaConsultas($conexao,$id_medico);
 
 					<th scope="col">Data</th>
 					<th scope="col">Horário</th>
-					<th scope="col">Desmarcar</th>
+					<th scope="col">Médico</th>
 				</tr>
 			</thead>
 			<tbody>
-			
 				
+				
+
 						<?php 
 							foreach($consultas as $consulta){ ?> 
-						<form action="desmarca_consulta.php" method="POST">		
 							<tr>
-								<td><?=$consulta['data']?></td>
-								<td><?=$consulta['hora']?></td>
-								<input type="hidden" name="data" value="<?=$consulta['data']?>">
-							 	<input type="hidden" name="hora" value="<?=$consulta['hora']?>">
-							 	<input type="hidden" name="id_medico" value="<?=$consulta['id_medico']?>">
-							 	<input type="hidden" name="id_usuario" value="<?=$consulta['id_usuario']?>">
-								<td><button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#exampleModal">Confirmar</button></td>
+								<td><?=$consulta['id_consulta']?></td>
+								<td><?=$consulta['horario']?></td>
+								<td><button class="btn btn-danger">Confirmar</button></td>
 							</tr>
-							<?php } ?> 
-						</form>	
+							<?php } ?>
 
 						</tbody>
 					</table>
@@ -86,3 +81,7 @@ $consultas=buscaConsultas($conexao,$id_medico);
 				</div>
 			</div>
 
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/pisca.js"></script>

@@ -15,7 +15,7 @@ $usuario=buscaUsuario($conexao,$login_user,$senha);
 	    header("Location: home.php");
 }
 	else{
-		 $_SESSION["success"] = "Usuário logado com sucesso.";
+		 $_SESSION["success"] = "";
    		 logaUsuario($usuario);
    		 header("Location: home.php");
 	}

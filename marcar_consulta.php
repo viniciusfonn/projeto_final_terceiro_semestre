@@ -11,6 +11,7 @@ $data=$_POST['data'];
 $id_medico=$_POST['id_medico'];
 
 
+
 $id_usuario=$_SESSION["usuario_logado_id"];
 
 

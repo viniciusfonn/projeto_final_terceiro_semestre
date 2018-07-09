@@ -24,13 +24,12 @@ $tipo=$_POST['tipo'];
  }
 
 	$id_usuario_return=cadastra_paciente($conexao,$nome,$sobrenome,$dt_nasc,$rg,$sexo,$user_login,$senha);
+		echo "deu bom";
+	
 	if($id_usuario_return!=false){
-		
+		echo "deu bom";
 		cadastra_paciente_endereco($conexao,$id_usuario_return,$cidade,$estado,$rua,$numero,$complemento,$bairro);
 		cadastra_paciente_telefone($conexao,$id_usuario_return,$nr_telefone,$tipo);
 	}
-
-
-
 
  ?>

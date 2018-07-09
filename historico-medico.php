@@ -19,8 +19,8 @@ $consultas=buscaConsultas($conexao,$id_medico);
 <body>
 	<?php require_once("nav-medico.php"); ?>
 	<center><h2 style="margin-top: 30px;">Painel do médico - Minha consulta</h2></center><br><br>
-	<center><h2><a href="#">Consultas agendadas:</h2></a></center><br><br>
-	<div class="container" style="display:flex;justify-content:center;align-items:center; height: auto; padding-bottom: 200px; min-height: 415px;">
+	<center><h2><a href="#">Histórico de consultas:</h2></a></center><br><br>
+	<div class="container" style="display:flex;justify-content:center;align-items:center; height: auto; padding-bottom: 200px;">
 		
 
 		<table class="table" border="2" style="width: 500px">
@@ -29,26 +29,25 @@ $consultas=buscaConsultas($conexao,$id_medico);
 
 					<th scope="col">Data</th>
 					<th scope="col">Horário</th>
-					<th scope="col">Desmarcar</th>
+					<th scope="col">Paciente</th>
 				</tr>
 			</thead>
 			<tbody>
-			
+				<tr>
+					<td>02/07/2018</td>
+					<td>13:00</td>
+					<td width="200px"><center>AQUI VAI O NOME DO PACIENTE</center></td>
+				</tr>
 				
-						<?php 
+
+						<!-- <?php 
 							foreach($consultas as $consulta){ ?> 
-						<form action="desmarca_consulta.php" method="POST">		
 							<tr>
-								<td><?=$consulta['data']?></td>
-								<td><?=$consulta['hora']?></td>
-								<input type="hidden" name="data" value="<?=$consulta['data']?>">
-							 	<input type="hidden" name="hora" value="<?=$consulta['hora']?>">
-							 	<input type="hidden" name="id_medico" value="<?=$consulta['id_medico']?>">
-							 	<input type="hidden" name="id_usuario" value="<?=$consulta['id_usuario']?>">
-								<td><button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#exampleModal">Confirmar</button></td>
+								<td><?=$consulta['id_consulta']?></td>
+								<td><?=$consulta['horario']?></td>
+								<td><button class="btn btn-danger">Confirmar</button></td>
 							</tr>
-							<?php } ?> 
-						</form>	
+							<?php } ?> -->
 
 						</tbody>
 					</table>

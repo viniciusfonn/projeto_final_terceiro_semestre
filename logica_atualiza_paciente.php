@@ -1,6 +1,6 @@
 <?php 
 
-$pagina='logica_atualiza_paciente.php'; //aqui colocariamos o nome da pagina.
+$pagina='edita-perfil.php'; //aqui colocariamos o nome da pagina.
 if(basename($_SERVER["PHP_SELF"])=='$pagina'){
 die("<script>alert('Sem permição de acesso !')</script>\n<script>window.location=('home.php')</script>");
 }
