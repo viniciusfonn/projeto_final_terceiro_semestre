@@ -55,7 +55,6 @@ $medico=busca_medico($conexao,$id_medico);
 					</form>	
 
 						<?php } ?>
-					<button class="btn btn-danger" style="margin-bottom: 30px;">Feriado</button>
 					<?php 
 				}
 				
@@ -71,3 +70,5 @@ $medico=busca_medico($conexao,$id_medico);
 
 </body>
 </html>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>

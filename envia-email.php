@@ -32,7 +32,9 @@ $mail->msgHTML("<html>de: {$nome} <br/> email: {$email}<br/> mensagem: {$mensage
 $mail->AltBody="de: {$nome}\n email:{$email} \n mensagem:{$mensagem}";
 
 if($mail->send()){
-	header("Location: contato.php?sucesso=1");
+	echo "<script>window.alert('Mensagem enviada com Sucesso');</script>";
+	header( "Refresh:0.5; url=home.php");
+
 }else{
 	echo $mail->SMTPDebug = 2;
 	

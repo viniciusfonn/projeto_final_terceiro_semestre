@@ -10,7 +10,11 @@ date_default_timezone_set('America/Sao_Paulo');
 $id_especialidade=$_POST['id_especialidade'];
 $medicos_especial=NULL;
 $medicos_especial=busca_medico_especial($conexao,$id_especialidade);
-$nome_especialidade=busca_especialidade($conexao,$id_especialidade);
+if($medicos_especial){
+	$nome_especialidade=busca_especialidade($conexao,$id_especialidade);
+}else{
+	$nome_especialidade="";
+}
 ?>
 <body>
 	
@@ -49,7 +53,7 @@ $nome_especialidade=busca_especialidade($conexao,$id_especialidade);
 				?>
 				<div class="borda-medico container">
 					<div class="imagem-nome">
-						<img src="admin/imagens/<?=$medico['perfil']?>" width="100px" height="100px" alt="" style="border-radius: 50px; margin-right: 10px">	
+						<img src="admin/imagens/<?=$medico['perfil']?>" width="120px" height="120px" alt="" style="border-radius: 60px; margin-right: 10px">	
 						<h5 style="margin: 0 5px;"><?=$medico['nome']?>&nbsp<?=$medico['sobrenome']?></h5>
 					</div>
 					<br>
@@ -167,13 +171,10 @@ $nome_especialidade=busca_especialidade($conexao,$id_especialidade);
 					</div>
 				</div>
 			</div>
-
-
-
-
-
-
-<script src="js/jquery-3.3.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/pisca.js"></script>
+
+
+
+
+

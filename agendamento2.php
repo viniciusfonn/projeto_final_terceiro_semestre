@@ -22,7 +22,7 @@ $medico=busca_medico($conexao,$id_medico);
 <body>
 	<?php require_once("nav.php"); ?>
 
-	<div class="container" style="display:flex;justify-content:center;align-items:center; min-height: 400px;">
+	<div class="container" style="display:flex;justify-content:center;align-items:center; min-height: 550px;">
 		<center><h4>Você escolheu uma consulta para o Dia: <?=$data?>  Horário: <?=$id?> com o médico:<?=$medico['nome']?></h4>
 			<h5>Tem certeza que deseja agendar essa consulta?</h5>
 			

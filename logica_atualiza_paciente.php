@@ -14,7 +14,7 @@ $sobrenome=$_POST['sobrenome'];
 $dt_nasc=$_POST['dt_nasc'];
 $rg=$_POST['rg'];
 $sexo=$_POST['sexo'];
-$user_login=$_POST['user_login'];
+$login=$_POST['user_login'];
 $senha=$_POST['senha'];
 $cidade=$_POST['cidade'];
 $estado=$_POST['estado'];
@@ -23,7 +23,10 @@ $numero=$_POST['numero'];
 $complemento=$_POST['complemento'];
 $bairro=$_POST['bairro'];
 $nr_telefone=$_POST['nr_telefone'];
-$tipo=$_POST['tipo'];
+$cep=$_POST['cep'];
+$id_usuario=$_POST['id_usuario'];
+
+
 
 
 
@@ -31,21 +34,15 @@ verificausuario();
 
 
 
-	$id_usuario_return=atualiza_paciente($conexao,$id_usuario,$nome,$sobrenome,$dt_nasc,$rg,$sexo,$user_login,$senha);
+	$id_usuario_return=atualiza_paciente($conexao,$id_usuario,$nome,$sobrenome,$dt_nasc,$rg,$login,$senha);
+	
 
-	if($id_usuario_return!=false){
-		atualiza_paciente_endereco($conexao,$id_usuario_return,$cidade,$estado,$rua,$numero,$complemento,$bairro);
-		atualiza_paciente_telefone($conexao,$id_usuario_return,$nr_telefone,$tipo);
+		atualiza_paciente_endereco($conexao,$id_usuario,$cidade,$estado,$rua,$numero,$complemento,$bairro,$cep);
+		atualiza_paciente_telefone($conexao,$id_usuario,$nr_telefone);
 
 		echo "<center><h1>Cadastro atualizado com sucesso.</h1></center>";
 		// essa porra serve pra pagina voltar pra selec.php DEPOIS DE 2 SEGUNDOES
 		
-		header("Refresh:2; url=index.php");
-	}	
-	else{
-	echo "Erro";
-
-
-	}
+		header("Refresh:2; url=home.php");
 
  ?>

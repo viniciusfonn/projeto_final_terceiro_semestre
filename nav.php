@@ -18,7 +18,6 @@
 			<div class="btn-group dropleft">
 				<a href="home.php">Home</a>
 				<a href="contato.php">Contate-nos</a>
-				<a href="sobre.php">Sobre</a>
 				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Perfil
 				</button>
@@ -39,7 +38,6 @@
 
 			<li><a href="home.php">Home</a></li>
 			<li><a href="contato.php">Contate-nos</a></li>
-			<li><a href="sobre.php">Sobre</a></li>
 
 			<!-- BOTÃO LOGIN MODAL -->
 			<button type="button" class="btn btn-primary btn-login-mc" data-toggle="modal" data-target="#exampleModal">
@@ -57,10 +55,10 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<form action="logica_login_paciente.php" method="POST" name="formulario">
+							<form action="logica_login_paciente.php" method="POST" name="formulario" id="formlogin">
 								<div class="form-group">
 									<label for="nome">Email:</label>
-									<input type="email" class="form-control" id="email" aria-describedby="login" placeholder="Digite seu email" name="login_user">
+									<input type="text" class="form-control" id="email" aria-describedby="login" placeholder="Digite seu email" name="login_user">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Senha:</label>
@@ -85,4 +83,40 @@
 
 	</ul>
 </nav>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+
+<script>
+
+
+	$(document).ready( function(){
+
+		$("#formlogin").validate({
+			rules:{
+				login_user:{
+					required: true
+
+				},
+				senha:{
+					required: true,
+					rangelength: [4,10]
+				}
+
+			},	
+				messages:{
+					login_user:{
+						required: "Este campo é obrigatorio"
+						
+					},
+					senha:{
+						required: "Este campo é obrigatorio",
+						rangelength: "Digite entre 4 e 10 caracteres"
+					}
+				}
+			});		
+	});
+
+</script>
+
+
 

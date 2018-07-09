@@ -25,7 +25,7 @@
 							<p class="lead">É um
 								<strong>profissional?</strong>
 							</p>
-							<a href="cadastro-medico.php" class="btn btn-primary">Disponibilize seu serviço</a>
+							<a href="contato.php" class="btn btn-primary">Disponibilize seu serviço</a>
 						</div>
 					</div>
 				</div>

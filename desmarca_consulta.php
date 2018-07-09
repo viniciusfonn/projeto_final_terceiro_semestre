@@ -11,7 +11,8 @@ $id_medico=$_POST['id_medico'];
 
 
 if(desmarcar_consulta($conexao,$hora,$data,$id_usuario,$id_medico)){
-	echo "sucesso";
+	echo "<script>window.alert('Desmarcado com sucesso');</script>";
+	header( "Refresh:1; url=painel_medico.php");
 	}
 
 

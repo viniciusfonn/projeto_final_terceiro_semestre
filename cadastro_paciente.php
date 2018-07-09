@@ -18,7 +18,7 @@
 	</div>
 	
 	<h1>Formulário de cadastro:</h1><br>
-				<form action="logica_cadastra_paciente.php" method="POST" >
+				<form action="logica_cadastra_paciente.php" method="POST" id="form-cad">
 					<div>
 					<h4>Dados pessoais:</h4><br>
 					<div class="row">
@@ -119,14 +119,101 @@
 			
 
 </div>
-<script type="text/javascript">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/cep.js"></script>
+
 </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/cep.js"></script>
+
+<script>
+
+			
+			$(document).ready( function(){
+
+				$("#form-cad").validate({
+					rules:{
+
+						nome: {
+							required: true,
+							rangelength: [4,15]
+						},
+
+						sobrenome: {
+							required: true,
+							rangelength: [4,30]
+						},
+
+						rg: {
+							required: true,
+							number: true,
+							rangelength: [10,10]
+						},
+
+						user_login:{
+							required: true
+
+						},
+
+						senha:{
+							required: true,
+							rangelength: [4,10]
+						},
+
+						numero: {
+							required: true,
+							number: true
+						},
+
+						nr_telefone:{
+							required: true,
+							number: true
+						}
+
+					},
+
+					messages:{
+
+						nome: {
+							required: "Este campo é obrigatório",		
+							rangelength: "Digite entre 4 e 15 caracteres"
+						},
+
+						sobrenome: {
+							required: "Este campo é obrigatório",		
+							rangelength: "Digite entre 4 e 30 caracteres"
+						},
+
+						rg: {
+							required: "Este campo é obrigatório",
+							number:"Digite apenas números",
+							rangelength: "O RG precisa ter 10 dígitos"
+
+						}, 
+
+						user_login:{
+							required: "Este campo é obrigatório"
+
+						},
+
+						senha:{
+							required: "Este campo é obrigatorio",
+							rangelength: "Digite entre 4 e 10 caracteres"
+						},
+
+						numero: {
+							required: "Este campo é obrigatório",
+							number: "Digite apenas números"
+						},
+
+						nr_telefone:{
+							required: "Este campo é obrigatório",
+							number: "Digite apenas números"
+						}
+
+					}
+				});		
+			});
+
+		</script>

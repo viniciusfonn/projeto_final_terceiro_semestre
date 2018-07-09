@@ -23,7 +23,7 @@
 				<div class="dropdown-menu">
 					<ul class="lista-drop">
 						<li><a href="painel_medico.php">Consultas</a></li>
-						<li><a href="agendamento-medico.php">Agendamento</a></li>
+						<li><a href="agendamento-medico.php">Indisponíveis</a></li>
 						<li><a href="historico-medico.php">Histórico</a></li>
 						<li><a href="logout.php">Deslogar</a></li>
 					</ul>
@@ -85,5 +85,36 @@
 </nav>
 
 <script src="js/jquery-3.3.1.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+
+<script>
+
+
+	$(document).ready( function(){
+
+		$("#formlogin").validate({
+			rules:{
+				login_user:{
+					required: true
+
+				},
+				senha:{
+					required: true,
+					rangelength: [4,10]
+				}
+
+			},	
+				messages:{
+					login_user:{
+						required: "Este campo é obrigatorio"
+						
+					},
+					senha:{
+						required: "Este campo é obrigatorio",
+						rangelength: "Digite entre 4 e 10 caracteres"
+					}
+				}
+			});		
+	});
+
+</script>

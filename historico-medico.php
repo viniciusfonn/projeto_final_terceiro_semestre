@@ -15,6 +15,8 @@ $consultas=buscaConsultas($conexao,$id_medico);
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php require_once("header.php"); ?>
+<?php require_once("_funcoes/funcoes_paciente.php"); ?>
+
 
 <body>
 	<?php require_once("nav-medico.php"); ?>
@@ -33,21 +35,22 @@ $consultas=buscaConsultas($conexao,$id_medico);
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>02/07/2018</td>
-					<td>13:00</td>
-					<td width="200px"><center>AQUI VAI O NOME DO PACIENTE</center></td>
-				</tr>
+				
 				
 
-						<!-- <?php 
+						<?php 
 							foreach($consultas as $consulta){ ?> 
+
 							<tr>
-								<td><?=$consulta['id_consulta']?></td>
-								<td><?=$consulta['horario']?></td>
-								<td><button class="btn btn-danger">Confirmar</button></td>
+								<td><?=$consulta['data']?></td>
+								<td><?=$consulta['hora']?></td>
+								<?php 
+								$id_usuario=$consulta['id_usuario'];
+								 $paciente=busca_paciente($conexao,$id_usuario); ?>
+								<td><?=$paciente['nome']?></td>
+
 							</tr>
-							<?php } ?> -->
+							<?php } ?>
 
 						</tbody>
 					</table>
@@ -84,4 +87,7 @@ $consultas=buscaConsultas($conexao,$id_medico);
 					</div>
 				</div>
 			</div>
+
+			<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 

@@ -7,7 +7,7 @@ require_once('conecta.php');
 
 $_SESSION['medico_logado'];
 $id_medico=$_SESSION["medico_logado_id"];
-$consultas=buscaConsultas($conexao,$id_medico);
+$consultas=buscaConsultasAgendadas($conexao,$id_medico);
 
 ?>
 
@@ -85,4 +85,5 @@ $consultas=buscaConsultas($conexao,$id_medico);
 					</div>
 				</div>
 			</div>
-
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>

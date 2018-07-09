@@ -16,6 +16,8 @@ $consultas=consultas_marcadas_historico($conexao,$id_usuario);
 <html lang="pt-br">
 
 
+
+
 <body>
 	<?php require_once("nav.php"); ?>
 	<center><h2 style="margin-top: 30px;">Painel do médico - Minha consulta</h2></center><br><br>
@@ -80,8 +82,5 @@ $consultas=consultas_marcadas_historico($conexao,$id_usuario);
 					</div>
 				</div>
 			</div>
-
-<script src="js/jquery-3.3.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/pisca.js"></script>
